@@ -1,0 +1,51 @@
+.itemTitle {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 10px 20px;
+}
+.bgListContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bgItem {
+  width: 20%;
+  height: 160px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .btnCopy {
+      opacity: 1;
+    }  
+  }
+  .btnCopy {
+    width: 100px;
+    height: 40px;
+    line-height: 36px;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-size: 16px;
+    outline: none;
+  }
+  .text {
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Comic Sans MS';
+    font-size: 16px;
+  }
+}
