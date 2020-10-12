@@ -1,32 +1,29 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import { getToolList } from '../utils/page-home-server'
+import Layout from '../components/Layout/Layout'
+import UserInfo from '../components/page-home/UserInfo/UserInfo';
+import ToolListShow from '../components/page-home/ToolListShow/ToolListShow';
 
-export default function Home() {
-
+export default function Home(props) {
+  const { toolList } = props;
+  const siteTitle = '常用工具集';
   return (
-    <Layout home>
+    <Layout home siteTitle={siteTitle}>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="Learn how to build a personal website using Next.js" />
+        <meta name="keywords" content="color,font,font-family" />
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>A coder, a boy!</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-      </section>
+      <UserInfo />
+      <ToolListShow toolList={toolList}  />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  console.log('Home getStaticProps runs...');
   return {
     props: {
+      toolList: getToolList(),
     }
-  }
+  };
 }
