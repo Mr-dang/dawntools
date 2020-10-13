@@ -6,6 +6,9 @@
   & + .fontContainer {
     margin-top: 15px;
   }
+  * {
+    font: inherit;
+  }
 }
 .text {
   line-height: 1.4;

@@ -1,6 +1,25 @@
 [
   { "value": "Arial", "name": "" },
-  { "value": "楷体", "name": "楷体" },
   { "value": "Comic Sans MS", "name": "Comic Sans MS" },
-  { "value": "Consolas", "name": "Consolas" }
+  { "value": "Consolas", "name": "Consolas" },
+  { "value": "Courier New", "name": "Courier New" },
+  { "value": "monospace", "name": "monospace" },
+  { "value": "Times New Roman", "name": "Times New Roman" },
+  { "value": "Gabriola", "name": "Gabriola" },
+  { "value": "Georgia", "name": "Georgia" },
+  { "value": "Lucida Console", "name": "Lucida Console" },
+  { "value": "Microsoft JhengHei", "name": "Microsoft JhengHei" },
+  { "value": "Microsoft JhengHei Light", "name": "Microsoft JhengHei Light" },
+  { "value": "Ink Free", "name": "Ink Free" },
+  { "value": "Yu Gothic", "name": "Yu Gothic" },
+  { "value": "Yu Gothic Light", "name": "Yu Gothic Light" },
+  { "value": "Yu Gothic UI", "name": "Yu Gothic UI" },
+  { "value": "Yu Gothic UI Light", "name": "Yu Gothic UI Light" },
+  { "value": "宋体", "name": "宋体" },
+  { "value": "微软雅黑", "name": "微软雅黑" },
+  { "value": "微软雅黑Light", "name": "Microsoft YaHei UI Light" },
+  { "value": "新宋体", "name": "新宋体" },
+  { "value": "仿宋", "name": "仿宋" },
+  { "value": "黑体", "name": "黑体" },
+  { "value": "楷体", "name": "楷体" }
 ]

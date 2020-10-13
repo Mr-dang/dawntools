@@ -5,12 +5,14 @@ import Layout from '../../components/Layout/Layout'
 import FontItem from '../../components/page-fonts/font-item/FontItem'
 import SetFontSize from '../../components/page-fonts/SetFontSize/SetFontSize'
 import SetFontWeight from '../../components/page-fonts/SetFontWeight/SetFontWeight'
+import SetFontStyle from '../../components/page-fonts/SetFontStyle/SetFontStyle'
 import style from '../../styles/pages/page.fonts.module.scss'
 
 export default function Fonts(props) {
   const { fonts, siteTitle, os } = props;
   const [fontSize, setFontSize] = useState('14px');
   const [fontWeight, setFontWeight] = useState(500);
+  const [fontStyle, setFontStyle] = useState('normal');
   return (
     <Layout siteTitle={siteTitle}>
       <Head>
@@ -21,8 +23,9 @@ export default function Fonts(props) {
       <div className={style.settingBox}>
         <SetFontSize fontSize={fontSize} setFontSize={setFontSize} />
         <SetFontWeight fontWeight={fontWeight} setFontWeight={setFontWeight} />
+        <SetFontStyle fontStyle={fontStyle} setFontStyle={setFontStyle} />
       </div>
-      <div className={style.fsContainer} style={{fontSize, fontWeight}}>
+      <div className={style.fsContainer} style={{fontSize, fontWeight, fontStyle}}>
         {fonts.map(font => <FontItem key={font.value} {...font} />)}
       </div>
     </Layout>
