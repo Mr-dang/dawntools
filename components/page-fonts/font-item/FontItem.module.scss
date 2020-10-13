@@ -1,26 +1,31 @@
-.container {
+.fontContainer {
   padding: 10px;
-  margin: 10px;
   border: 1px solid #cbacec;
-  border-radius: 8px;
-  align-self: flex-start;
-}
-.item {
-  display: inline-flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
+  border-radius: 6px;
+  transition: all 0.25s;
+  & + .fontContainer {
+    margin-top: 15px;
+  }
 }
 .text {
-  flex: 0 0 auto;
-  width: 300px;
-  line-height: 24px;
-  word-break: break-all;
-  font-size: 18px;
+  line-height: 1.4;
+  & +.text { margin-top: 5px; }
 }
 .info {
-  font-size: 14px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.code {
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  &:hover {
+    background-color: #100f0f;
+    color: #ea532d;
+  }
 }

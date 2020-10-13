@@ -1,6 +1,17 @@
 .fsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto 0;
   font-size: 14px;
+}
+.settingBox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

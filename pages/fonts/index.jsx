@@ -1,11 +1,16 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import { getWindowsFontsList, getMacFontsList } from '../../utils/page-fonts-server'
 import Layout from '../../components/Layout/Layout'
 import FontItem from '../../components/page-fonts/font-item/FontItem'
+import SetFontSize from '../../components/page-fonts/SetFontSize/SetFontSize'
+import SetFontWeight from '../../components/page-fonts/SetFontWeight/SetFontWeight'
 import style from '../../styles/pages/page.fonts.module.scss'
 
-export default function Home(props) {
+export default function Fonts(props) {
   const { fonts, siteTitle, os } = props;
+  const [fontSize, setFontSize] = useState('14px');
+  const [fontWeight, setFontWeight] = useState(500);
   return (
     <Layout siteTitle={siteTitle}>
       <Head>
@@ -13,7 +18,11 @@ export default function Home(props) {
         <meta name="description" content={siteTitle} />
         <meta name="keywords" content={"font,font-family," + os} />
       </Head>
-      <div className={style.fsContainer}>
+      <div className={style.settingBox}>
+        <SetFontSize fontSize={fontSize} setFontSize={setFontSize} />
+        <SetFontWeight fontWeight={fontWeight} setFontWeight={setFontWeight} />
+      </div>
+      <div className={style.fsContainer} style={{fontSize, fontWeight}}>
         {fonts.map(font => <FontItem key={font.value} {...font} />)}
       </div>
     </Layout>

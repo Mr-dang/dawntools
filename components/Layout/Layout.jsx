@@ -1,15 +1,13 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import CustomLink from '../common/CustomLink/CustomLink'
 import style from './Layout.module.css'
 
 function BackToHome() {
   const name = 'danglm'
   return (
-    <Link href="/">
-      <a>
-        <img src="/images/profile.jpg" className={style.image} alt={name} />
-      </a>
-    </Link>
+    <CustomLink href="/" className={style.container}>
+      <img src="/images/profile.jpg" className={style.image} alt={name} />
+    </CustomLink>
   );
 }
 
@@ -23,7 +21,6 @@ export default function Layout({ children, home }) {
         {!home && <BackToHome />}
       </header>
       <main>{children}</main>
-      {!home && <Link href="/">← Back to home</Link>}
     </>
   )
 }

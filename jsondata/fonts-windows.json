@@ -1,4 +1,6 @@
 [
   { "value": "Arial", "name": "" },
-  { "value": "楷体", "name": "楷体" }
+  { "value": "楷体", "name": "楷体" },
+  { "value": "Comic Sans MS", "name": "Comic Sans MS" },
+  { "value": "Consolas", "name": "Consolas" }
 ]
