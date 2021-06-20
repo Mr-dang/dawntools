@@ -18,3 +18,6 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
 通过 [vercel](https://vercel.com/)(通过github账号登录) 部署
 
+## avatar
+
+https://dawntools.vercel.app/api/avatar/?text=helloworld&variant=flower
