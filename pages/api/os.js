@@ -1,6 +1,6 @@
 const os = require('os');
 
-export default function(req, res) {
+module.exports = function (req, res) {
 
   res.status(200).json({
     cpus: os.cpus(),
