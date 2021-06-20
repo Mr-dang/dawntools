@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
-    "date-fns": "^2.16.1",
-    "next": "^10.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "sass": "^1.27.0"
+    "date-fns": "^2.22.1",
+    "next": "^11.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.35.1"
+  },
+  "engines": {
+    "node": ">=16.3.0"
   }
 }
