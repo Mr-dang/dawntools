@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const variantTypes = ['normal', 'stagger', 'spider', 'flower', 'gem'];
 
 class SHA256Avatar {
   constructor(props = {}) {
@@ -11,7 +12,7 @@ class SHA256Avatar {
     this.showGrid = props.showGrid || false;
     this.showLabels = props.showLabels || false;
     this.showSections = props.showSections || true;
-    this.variant = props.showSections || 'normal';
+    this.variant = variantTypes.includes(props.variant) ? props.variant : variantTypes[0];
   }
 
   sha256(text) {
