@@ -1851,7 +1851,7 @@ function fish_head(x0,y0,x1,y1,x2,y2,arg){
   
   let bbs = [];
 
-  lip1s = [lip1];
+  let lip1s = [lip1];
 
   if (arg.has_moustache){
     let bb0 = barbel(...jaw_pt0,arg.moustache_length,PI*3/4,1.5);
@@ -2580,4 +2580,5 @@ export {
   binomen,
   str_to_seed,
   draw_svg_anim,
+  draw_ps,
 };
